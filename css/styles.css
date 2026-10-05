@@ -908,3 +908,22 @@ body.dark-mode .security-card {
 body.dark-mode .security-card:hover {
   box-shadow: 0 14px 28px rgba(34, 196, 242, 0.18);
 }
+
+/* ===== Responsivo: Políticas de seguridad ===== */
+
+@media (max-width: 800px) {
+  .security-section {
+    padding: 3rem 0 4rem;
+  }
+
+  .security-grid {
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .security-card {
+    padding: 1.25rem;
+  }
+}
