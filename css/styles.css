@@ -1,15 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Sora:wght@400;600;700&display=swap");
 
 :root {
-  --color-background: #f3ede4;
+  /* Paleta tomada del logo de Coyoteando */
+  --color-background: #f3ede4; /* crema cálido */
   --color-surface: #ffffff;
   --color-text: #14100d;
-  --color-carbon: #14100d;
-  --color-brown: #3b2418;
-  --color-fur: #b9743a;
-  --color-orange: #e8913a;
-  --color-cyan: #22c4f2;
+  --color-carbon: #14100d;     /* negro/carbón: contornos y textos */
+  --color-brown: #3b2418;      /* café oscuro del pelaje */
+  --color-fur: #b9743a;        /* café del pelaje */
+  --color-orange: #e8913a;     /* naranja/ámbar */
+  --color-cyan: #22c4f2;       /* cian neón de los audífonos */
 
+  /* Tipografías */
   --font-display: "Chakra Petch", Arial, sans-serif;
   --font-body: "Sora", Arial, sans-serif;
 
@@ -31,6 +33,9 @@ body {
   color: var(--color-text);
   font-family: var(--font-body);
   line-height: 1.6;
+  transition:
+    background-color 200ms ease,
+    color 200ms ease;
 }
 
 img {
@@ -46,6 +51,7 @@ button {
   font: inherit;
 }
 
+/* Estilos globales de selección y foco */
 ::selection {
   background-color: var(--color-cyan);
   color: var(--color-carbon);
@@ -97,6 +103,9 @@ h2 {
 .site-header {
   border-bottom: 1px solid rgba(59, 36, 24, 0.2);
   background-color: var(--color-surface);
+  transition:
+    background-color 200ms ease,
+    border-color 200ms ease;
 }
 
 .header-content {
@@ -200,6 +209,7 @@ h2 {
 
 .section-placeholder:nth-child(even) {
   background-color: rgba(255, 255, 255, 0.45);
+  transition: background-color 200ms ease;
 }
 
 .section-label {
@@ -214,6 +224,7 @@ h2 {
   padding: 2rem 0;
   background-color: var(--color-brown);
   color: var(--color-background);
+  transition: background-color 200ms ease;
 }
 
 .footer-content {
@@ -223,6 +234,61 @@ h2 {
   gap: 1rem;
 }
 
+/* Modo oscuro */
+body.dark-mode {
+  --color-background: #14100d;
+  --color-surface: #241812;
+  --color-text: #f3ede4;
+  --color-carbon: #f3ede4;
+  --color-brown: #f3ede4;
+  --color-orange: #f2a14f;
+
+  background-color: #14100d;
+  color: #f3ede4;
+}
+
+body.dark-mode .site-header {
+  background-color: #241812;
+  border-bottom-color: rgba(243, 237, 228, 0.25);
+}
+
+body.dark-mode .brand,
+body.dark-mode .navigation-link,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #f3ede4;
+}
+
+body.dark-mode .navigation-link:hover,
+body.dark-mode .navigation-link:focus-visible {
+  color: #22c4f2;
+}
+
+body.dark-mode .section-placeholder:nth-child(even) {
+  background-color: #3b2418;
+}
+
+body.dark-mode .section-placeholder:nth-child(odd) {
+  background-color: #14100d;
+}
+
+body.dark-mode .theme-toggle,
+body.dark-mode .menu-toggle {
+  color: #f3ede4;
+  border-color: #22c4f2;
+}
+
+body.dark-mode .menu-toggle span {
+  background-color: #f3ede4;
+}
+
+body.dark-mode .site-footer {
+  background-color: #0d0a08;
+  color: #f3ede4;
+}
+
+/* Respeta a quienes prefieren menos movimiento */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
