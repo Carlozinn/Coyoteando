@@ -155,8 +155,26 @@
       día.
     </p>
 
+    <div class="product-filters" aria-label="Filtrar productos por categoría">
+  <button class="button button-secondary filter-button is-active" type="button" data-filter="all">
+    Todos
+  </button>
+
+  <button class="button button-secondary filter-button" type="button" data-filter="audio">
+    Audio
+  </button>
+
+  <button class="button button-secondary filter-button" type="button" data-filter="accesorios">
+    Accesorios
+  </button>
+
+  <button class="button button-secondary filter-button" type="button" data-filter="wearables">
+    Wearables
+  </button>
+</div>
+
     <div class="products-grid">
-      <article class="product-card">
+      <article class="product-card" data-category="audio">
         <div class="product-card-icon" aria-hidden="true">🎧</div>
 
         <div class="product-card-content">
@@ -170,7 +188,7 @@
         </div>
       </article>
 
-      <article class="product-card">
+      <article class="product-card" data-category="accesorios">
         <div class="product-card-icon" aria-hidden="true">⚡</div>
 
         <div class="product-card-content">
@@ -184,7 +202,7 @@
         </div>
       </article>
 
-      <article class="product-card">
+      <article class="product-card" data-category="wearables">
         <div class="product-card-icon" aria-hidden="true">⌚</div>
 
         <div class="product-card-content">
