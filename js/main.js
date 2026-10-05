@@ -101,3 +101,40 @@ filterButtons.forEach((button) => {
 });
   });
 });
+
+// Validación del formulario de contacto
+const contactForm = document.querySelector("#contact-form");
+const formMessage = document.querySelector("#form-message");
+
+if (contactForm && formMessage) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    const nameInput = document.querySelector("#contact-name");
+    const emailInput = document.querySelector("#contact-email");
+    const messageInput = document.querySelector("#contact-message");
+
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const message = messageInput.value.trim();
+
+    if (!name || !email || !message) {
+      formMessage.textContent =
+        "Por favor, completa todos los campos del formulario.";
+      formMessage.className = "form-message is-error";
+      return;
+    }
+
+    if (!emailInput.validity.valid) {
+      formMessage.textContent =
+        "Por favor, escribe un correo electrónico válido.";
+      formMessage.className = "form-message is-error";
+      return;
+    }
+
+    formMessage.textContent =
+      "Tu mensaje fue validado correctamente. Gracias por contactarnos.";
+    formMessage.className = "form-message is-success";
+    contactForm.reset();
+  });
+}

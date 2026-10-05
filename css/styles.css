@@ -751,3 +751,110 @@ body.dark-mode .about-card:hover {
     padding: 1.25rem;
   }
 }
+
+/* ===== Sección Contacto ===== */
+
+.contact-section {
+  padding: 4rem 0 5rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.contact-information,
+.contact-form {
+  padding: 1.75rem;
+  border: 1px solid rgba(59, 36, 24, 0.2);
+  border-radius: 1rem;
+  background-color: var(--color-surface);
+  box-shadow: 0 8px 20px rgba(20, 16, 13, 0.08);
+}
+
+.contact-information {
+  align-self: start;
+}
+
+.contact-information h3 {
+  margin-top: 0;
+  color: var(--color-orange);
+  font-family: var(--font-display);
+}
+
+.contact-information p {
+  line-height: 1.6;
+}
+
+.contact-information a {
+  color: var(--color-orange);
+  font-weight: 700;
+}
+
+.contact-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-group {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.form-group label {
+  font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid rgba(59, 36, 24, 0.35);
+  border-radius: 0.6rem;
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font: inherit;
+}
+
+.form-group textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: 3px solid rgba(34, 196, 242, 0.3);
+  border-color: var(--color-cyan);
+}
+
+.form-group input:user-invalid,
+.form-group textarea:user-invalid {
+  border-color: #c0392b;
+}
+
+.form-message {
+  min-height: 1.5rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.form-message.is-error {
+  color: #c0392b;
+}
+
+.form-message.is-success {
+  color: #218c52;
+}
+
+body.dark-mode .contact-information,
+body.dark-mode .contact-form {
+  border-color: rgba(243, 237, 228, 0.2);
+}
+
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea {
+  border-color: rgba(243, 237, 228, 0.35);
+}
