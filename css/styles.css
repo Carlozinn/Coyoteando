@@ -858,3 +858,53 @@ body.dark-mode .form-group input,
 body.dark-mode .form-group textarea {
   border-color: rgba(243, 237, 228, 0.35);
 }
+
+/* ===== Sección Políticas de seguridad ===== */
+
+.security-section {
+  padding: 4rem 0 5rem;
+}
+
+.security-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.security-card {
+  padding: 1.75rem;
+  border: 1px solid rgba(59, 36, 24, 0.2);
+  border-radius: 1rem;
+  background-color: var(--color-surface);
+  box-shadow: 0 8px 20px rgba(20, 16, 13, 0.08);
+  transition:
+    transform 150ms ease,
+    box-shadow 150ms ease,
+    border-color 150ms ease;
+}
+
+.security-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-orange);
+  box-shadow: 0 14px 28px rgba(232, 145, 58, 0.22);
+}
+
+.security-card h3 {
+  margin-top: 0;
+  color: var(--color-orange);
+  font-family: var(--font-display);
+}
+
+.security-card p {
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+body.dark-mode .security-card {
+  border-color: rgba(243, 237, 228, 0.2);
+}
+
+body.dark-mode .security-card:hover {
+  box-shadow: 0 14px 28px rgba(34, 196, 242, 0.18);
+}
