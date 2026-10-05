@@ -927,3 +927,70 @@ body.dark-mode .security-card:hover {
     padding: 1.25rem;
   }
 }
+
+/* ===== Catálogo mejorado: filtros, imágenes, precios y etiquetas ===== */
+
+.product-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.filter-button.is-active {
+  border-color: var(--color-orange);
+  background-color: var(--color-orange);
+  color: #14100d;
+}
+
+.product-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  background-color: rgba(232, 145, 58, 0.1);
+  transition: transform 200ms ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.04);
+}
+
+.product-price {
+  margin: 0 0 0.25rem;
+  color: var(--color-brown);
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.product-badge {
+  position: absolute;
+  top: 2.5rem;
+  right: 1rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  background-color: var(--color-orange);
+  color: #14100d;
+  font-family: var(--font-display);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+body.dark-mode .product-price {
+  color: var(--color-orange);
+}
+
+@media (max-width: 1024px) and (min-width: 801px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
