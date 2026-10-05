@@ -732,3 +732,22 @@ body.dark-mode .about-card {
 body.dark-mode .about-card:hover {
   box-shadow: 0 14px 28px rgba(34, 196, 242, 0.18);
 }
+
+/* ===== Responsivo ¿Quiénes somos? ===== */
+
+@media (max-width: 800px) {
+  .about-section {
+    padding: 3rem 0 4rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-card {
+    padding: 1.25rem;
+  }
+}
