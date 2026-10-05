@@ -144,17 +144,80 @@
       </div>
     </section>
 
-    <section
-      id="productos-servicios"
-      class="page-section section-placeholder"
-    >
-      <div class="container">
-        <h2>Productos / Servicios</h2>
-        <p>
-          Esta sección se desarrollará en la rama productos-servicios.
-        </p>
-      </div>
-    </section>
+    <section id="productos-servicios" class="page-section products-section">
+  <div class="container">
+    <p class="section-label">Nuestra tecnología</p>
+
+    <h2>Productos / Servicios</h2>
+
+    <p class="section-introduction">
+      Encuentra soluciones tecnológicas prácticas para acompañarte en tu día a
+      día.
+    </p>
+
+    <div class="product-filters" aria-label="Filtrar productos por categoría">
+  <button class="button button-secondary filter-button is-active" type="button" data-filter="all">
+    Todos
+  </button>
+
+  <button class="button button-secondary filter-button" type="button" data-filter="audio">
+    Audio
+  </button>
+
+  <button class="button button-secondary filter-button" type="button" data-filter="accesorios">
+    Accesorios
+  </button>
+
+  <button class="button button-secondary filter-button" type="button" data-filter="wearables">
+    Wearables
+  </button>
+</div>
+
+    <div class="products-grid">
+      <article class="product-card" data-category="audio">
+        <div class="product-card-icon" aria-hidden="true">🎧</div>
+
+        <div class="product-card-content">
+          <p class="product-category">Audio</p>
+          <h3>Audífonos inalámbricos</h3>
+          <p>
+            Disfruta tu música y llamadas con una experiencia cómoda y
+            práctica.
+          </p>
+          <span class="product-tag">Audio</span>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="accesorios">
+        <div class="product-card-icon" aria-hidden="true">⚡</div>
+
+        <div class="product-card-content">
+          <p class="product-category">Carga</p>
+          <h3>Cargador inalámbrico</h3>
+          <p>
+            Mantén tus dispositivos cargados con una solución sencilla para tu
+            espacio.
+          </p>
+          <span class="product-tag">Accesorios</span>
+        </div>
+      </article>
+
+      <article class="product-card" data-category="wearables">
+        <div class="product-card-icon" aria-hidden="true">⌚</div>
+
+        <div class="product-card-content">
+          <p class="product-category">Tecnología</p>
+          <h3>Smartwatch</h3>
+          <p>
+            Consulta tus actividades y notificaciones desde un dispositivo
+            pensado para acompañarte.
+          </p>
+          <span class="product-tag">Wearables</span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
     <section id="contacto" class="page-section section-placeholder">
       <div class="container">
